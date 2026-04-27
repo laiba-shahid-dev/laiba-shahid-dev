@@ -32,8 +32,9 @@ body {
   margin: 0;
   font-family: "Poppins", "Inter", sans-serif;
   font-size: 18px;
-  background: radial-gradient(circle at 15% 10%, #1b2560 0%, transparent 40%),
-    radial-gradient(circle at 85% 25%, #063b49 0%, transparent 35%), var(--bg);
+  background: radial-gradient(circle at 12% 8%, #34256f 0%, transparent 45%),
+    radial-gradient(circle at 85% 22%, #024e60 0%, transparent 38%),
+    radial-gradient(circle at 50% 95%, #4c1d95 0%, transparent 35%), var(--bg);
   color: var(--text);
   line-height: 1.75;
   overflow-x: hidden;
@@ -73,6 +74,11 @@ body {
   background: rgba(7, 11, 26, 0.65);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 50;
+}
+
+[data-theme="light"] .site-header {
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .nav {
@@ -152,6 +158,10 @@ h1 {
   margin: 0;
   line-height: 1.1;
   font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 20%, #a5b4fc 48%, #5eead4 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .typing-line {
@@ -225,6 +235,16 @@ h1 {
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.03);
+}
+
+.card {
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 92, 255, 0.55);
 }
 
 .section {
@@ -309,6 +329,12 @@ h3 {
   gap: 1rem;
 }
 
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .skill-card h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -324,6 +350,28 @@ h3 {
 .education-card {
   display: grid;
   gap: 0.4rem;
+}
+
+.testimonial-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.testimonial-card p {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.testimonial-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.testimonial-card span {
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .education-card p {
@@ -384,11 +432,23 @@ h3 {
   font-weight: 500;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 860px) {
   .about-layout {
     grid-template-columns: 1fr;
   }
 
+  .testimonials-grid,
   .projects-grid,
   .contact-layout,
   .skills-grid {
@@ -408,7 +468,22 @@ h3 {
     flex-wrap: wrap;
   }
 
+  .nav-links {
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .hero {
     padding-top: 5.3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
   }
 }

@@ -9,10 +9,9 @@ if (yearEl) {
 }
 
 const typingPhrases = [
-  "AI-Powered Full Stack Developer",
-  "Python & REST API Builder",
-  "Cursor AI Development Specialist",
-  "Prompt Engineering Enthusiast",
+  "AI-Powered Developer",
+  "Web Developer",
+  "Problem Solver",
 ];
 
 let phraseIndex = 0;
@@ -81,5 +80,30 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+const revealElements = document.querySelectorAll(
+  ".section, .hero, .card, .hero-actions"
+);
+
+revealElements.forEach((element) => element.classList.add("reveal"));
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.14,
+    rootMargin: "0px 0px -40px 0px",
+  }
+);
+
+revealElements.forEach((element) => {
+  revealObserver.observe(element);
+});
 
 runTypingEffect();
