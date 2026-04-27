@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laiba Shahid | AI-Powered Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-one" aria-hidden="true"></div>
+    <div class="bg-glow glow-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="container nav">
+        <a href="#home" class="logo">Laiba<span>.</span></a>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <span id="theme-icon">🌙</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero container">
+        <p class="hero-kicker">Hello, I'm</p>
+        <h1>Laiba Shahid</h1>
+        <p class="hero-title">AI-Powered Full Stack Developer</p>
+        <p class="typing-line">
+          <span id="typing-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-subtext">
+          Passionate Software Engineering student with expertise in AI-driven
+          development. I build modern web applications using cutting-edge AI
+          tools and technologies.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Let's Connect</a>
+          <a class="btn btn-secondary" href="#skills">View Skills</a>
+          <a class="btn btn-secondary" href="Laiba-CV.txt" download>Download CV</a>
+        </div>
+      </section>
+
+      <section id="about" class="section container">
+        <div class="section-header">
+          <p class="section-label">About Me</p>
+          <h2>Who I am</h2>
+        </div>
+        <div class="about-layout">
+          <div class="card photo-card" aria-label="Photo placeholder">
+            <p>Photo Coming Soon</p>
+          </div>
+          <div class="card about-card">
+          <p>
+            I am Laiba Shahid, a passionate Software Engineering student
+            focused on building impactful, AI-powered digital solutions.
+          </p>
+          <p>
+            My approach combines clean design, solid engineering, and smart AI
+            workflows to deliver modern, scalable, and user-centric web
+            applications.
+          </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section container">
+        <div class="section-header">
+          <p class="section-label">Skills</p>
+          <h2>What I work with</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="card skill-card">
+            <h3>Core Development</h3>
+            <p>
+              Python Programming, Web Development (HTML, CSS), REST APIs, Git &
+              GitHub
+            </p>
+          </article>
+          <article class="card skill-card">
+            <h3>AI & Productivity</h3>
+            <p>
+              AI Tools & Automation, Cursor AI Development, Prompt Engineering
+            </p>
+          </article>
+          <article class="card skill-card">
+            <h3>Strengths</h3>
+            <p>Problem Solving, Communication, Collaboration, Creativity</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section container">
+        <div class="section-header">
+          <p class="section-label">Projects</p>
+          <h2>Featured work</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="card project-card">
+            <h3>Transport Management System (FYP)</h3>
+            <p>
+              A complete transport management system built as a Final Year
+              Project using modern technologies.
+            </p>
+          </article>
+          <article class="card project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+              Built using Cursor AI with modern design principles and zero
+              manual coding.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="section container">
+        <div class="section-header">
+          <p class="section-label">Education</p>
+          <h2>Academic journey</h2>
+        </div>
+        <article class="card education-card">
+          <h3>Bachelor of Software Engineering</h3>
+          <p>Currently Pursuing</p>
+        </article>
+      </section>
+
+      <section id="contact" class="section container">
+        <div class="section-header">
+          <p class="section-label">Contact</p>
+          <h2>Let's create something impressive</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="card contact-card">
+            <p>
+              Open to internships, collaborations, and exciting software
+              opportunities. Reach out and let's build impactful products.
+            </p>
+            <div class="social-links">
+              <a
+                class="btn btn-secondary"
+                href="https://www.linkedin.com/in/laiba-shahid-48ba09374/"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn</a
+              >
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/laibashahid-1"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <a class="btn btn-primary" href="mailto:laibaxshahid1@gmail.com"
+                >laibaxshahid1@gmail.com</a
+              >
+            </div>
+          </div>
+          <form class="card contact-form" id="contact-form">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Laiba. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
